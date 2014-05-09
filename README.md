@@ -24,7 +24,8 @@ var app = express();
 
 app.use(new seo({
   cacheDirectory: path.resolve(process.cwd(), '.seo-cache'),
-  routes: require('./seo-routes')
+  routes: require('./seo-routes'),
+  requestURL: 'http://localhost:8080'
 }).init());
 
 app.listen(8080);
@@ -36,7 +37,7 @@ returns a boolean. The first parameter is the current request:
 
 ```js
 module.exports = function (request) {
-  if (request.path === "/") return true;
+  if (request.path === '/') return true;
   return false;
 }
 ```
