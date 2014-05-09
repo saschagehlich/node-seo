@@ -21,6 +21,7 @@ global.createServer = function(options) {
   app.server.use(_seo.init());
 
   app.server.get('/seo-route', function (req, res) {
+    console.log('GET /seo-route');
     res.end('ohai');
   });
 
