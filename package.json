@@ -1,0 +1,25 @@
+{
+  "name": "node-seo",
+  "version": "0.0.2",
+  "description": "A connect middleware that serves html snapshots of single page apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/saschagehlich/node-seo.git"
+  },
+  "keywords": [
+    "snapshot",
+    "phantom",
+    "search",
+    "bots"
+  ],
+  "author": "Sascha Gehlich <sascha@gehlich.us>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/saschagehlich/node-seo/issues"
+  },
+  "homepage": "https://github.com/saschagehlich/node-seo"
+}
