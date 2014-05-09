@@ -1,5 +1,4 @@
-node-seo
-========
+# node-seo [![Build Status](https://travis-ci.org/saschagehlich/node-seo.svg?branch=master)](https://travis-ci.org/saschagehlich/node-seo)
 
 node-seo is a connect middleware that can generate, cache and serve HTML
 snapshots of single page web apps for search bots. Uses [PhantomJS](http://phantomjs.org/)
