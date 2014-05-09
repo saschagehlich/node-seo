@@ -31,6 +31,9 @@ global.createServer = function(options) {
 
 global.clearCache = function() {
   var directory = path.resolve(process.cwd(), '.seo-cache');
+
+  if (!fs.existsSync(directory)) return;
+
   var files = fs.readdirSync(directory);
   files.forEach(function (file) {
     var filePath = directory + '/' + file;
