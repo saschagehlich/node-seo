@@ -1,5 +1,5 @@
 {
-  "name": "node-seo",
+  "name": "seo",
   "version": "0.0.2",
   "description": "A connect middleware that serves html snapshots of single page apps",
   "main": "index.js",
@@ -25,12 +25,7 @@
   "dependencies": {
     "underscore": "~1.6.0",
     "phantom": "~0.6.1",
-    "q": "~1.0.1",
-    "send": "~0.3.0",
-    "range-parser": "~1.0.0",
-    "mime": "~1.2.11",
-    "fresh": "~0.2.2",
-    "buffer-crc32": "~0.2.1"
+    "q": "~1.0.1"
   },
   "devDependencies": {
     "should": "~3.3.1",
