@@ -21,8 +21,8 @@ global.createServer = function(options) {
   app.server.use(_seo.init());
 
   app.server.get('/seo-route', function (req, res) {
-    console.log('GET /seo-route');
-    res.end('ohai');
+    var seoPagePath = path.resolve(process.cwd(), 'test/seo-page.html');
+    res.end(fs.readFileSync(seoPagePath));
   });
 
   app.server = app.server.listen(8899);

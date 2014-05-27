@@ -24,7 +24,12 @@ var app = express();
 app.use(new seo({
   cacheDirectory: path.resolve(process.cwd(), '.seo-cache'),
   routes: require('./seo-routes'),
-  requestURL: 'http://localhost:8080'
+  requestURL: 'http://localhost:8080',
+  pageModifier: function (page) {
+    // This function can be used to modify a page before it is cached
+    // `page` is an instance of PhantomJS's Page object. For an example
+    // see `test/middleware.test.js`
+  }
 }).init());
 
 app.listen(8080);
