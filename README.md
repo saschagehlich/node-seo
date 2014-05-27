@@ -25,7 +25,7 @@ app.use(new seo({
   cacheDirectory: path.resolve(process.cwd(), '.seo-cache'),
   routes: require('./seo-routes'),
   requestURL: 'http://localhost:8080',
-  pageModifier: function (page) {
+  pageModifier: function (page, callback) {
     // This function can be used to modify a page before it is cached
     // `page` is an instance of PhantomJS's Page object. For an example
     // see `test/middleware.test.js`
@@ -45,3 +45,7 @@ module.exports = function (request) {
   return false;
 }
 ```
+
+## Todo
+
+* Ability to pre-render (initial rendering can take some time and we don't want to affect our search engine ranking by slow rendering times)
