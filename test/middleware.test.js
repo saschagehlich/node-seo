@@ -1,4 +1,4 @@
-/* global createServer: true, clearCache: true */
+/* global createServer: true, clearCache: true, $: true */
 'use strict';
 var fs = require('fs');
 var path = require('path');
@@ -17,9 +17,9 @@ describe('Middleware', function() {
         var jqueryPath = path.resolve(process.cwd(), 'test/vendor/jquery-1.11.1.min.js');
         page.injectJs(jqueryPath);
         page.evaluate(function () {
-          $("head script").remove();
-        }, function (result) {
-          callback()
+          $('head script').remove();
+        }, function () {
+          callback();
         });
       }
     });
