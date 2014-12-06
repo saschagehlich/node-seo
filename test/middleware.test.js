@@ -50,7 +50,7 @@ describe('Middleware', function() {
       });
 
       it('should create a snapshot', function() {
-        var cachePath = path.resolve(process.cwd(), '.seo-cache', app.seo.middleware._getHashForPath('/seo-route'));
+        var cachePath = path.resolve(process.cwd(), '.seo-cache', app.seo.middleware._getHashForUrl('127.0.0.1', '/seo-route'));
         var exists = fs.existsSync(cachePath);
         exists.should.equal(true);
       });
@@ -58,7 +58,7 @@ describe('Middleware', function() {
       describe('when re-requesting a seo url', function() {
         var cachePath, statBefore, statAfter;
         before(function (next) {
-          cachePath = path.resolve(process.cwd(), '.seo-cache', app.seo.middleware._getHashForPath('/seo-route'));
+          cachePath = path.resolve(process.cwd(), '.seo-cache', app.seo.middleware._getHashForUrl('127.0.0.1', '/seo-route'));
           statBefore = fs.statSync(cachePath);
 
           setTimeout(next, 2000);
@@ -83,7 +83,7 @@ describe('Middleware', function() {
         .end(function (err) {
           if(err) throw err;
 
-          var cachePath = path.resolve(process.cwd(), '.seo-cache', app.seo.middleware._getHashForPath('/seo-route'));
+          var cachePath = path.resolve(process.cwd(), '.seo-cache', app.seo.middleware._getHashForUrl('127.0.0.1', '/seo-route'));
           var exists = fs.existsSync(cachePath);
           exists.should.equal(false);
 
