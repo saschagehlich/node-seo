@@ -12,9 +12,7 @@ global._every = function (t, f) { return setInterval(f, t); };
 
 global.createServer = function(options) {
   var app = {};
-  var _seo = new seo(_.defaults(options, {
-    requestURL: 'http://localhost:8899'
-  }));
+  var _seo = new seo(options);
 
   app.server = express();
   app.seo = _seo;
