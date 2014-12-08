@@ -1,6 +1,6 @@
 {
   "name": "seo",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "A connect middleware that serves html snapshots of single page apps",
   "main": "index.js",
   "scripts": {
