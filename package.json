@@ -24,7 +24,7 @@
   "homepage": "https://github.com/saschagehlich/node-seo",
   "dependencies": {
     "underscore": "~1.6.0",
-    "phantom": "~0.6.1",
+    "phantom": "~0.7.2",
     "q": "~1.0.1"
   },
   "devDependencies": {
